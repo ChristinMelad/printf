@@ -12,6 +12,6 @@ int _putchar(char c);
 void _puts(char *str);
 int len(char *s);
 int _printf(const char *format, ...);
-
+int print_c(va_list myvalue);
 
 #endif
