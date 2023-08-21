@@ -7,7 +7,6 @@
 #include <unistd.h>
 #include <string.h>
 
-
 int _putchar(char c);
 int print_string(va_list args, int numbers);
 int printc(va_list args, int numbers);

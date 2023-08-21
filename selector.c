@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
-*selector - selects the specifiers
-*@args: va_list variable
-*@numbers: count the characters
-*@format: string
-*Return: counted characters
-*/
+ *selector - selects the specifiers
+ *@args: va_list variable
+ *@numbers: count the characters
+ *@format: string
+ *Return: counted characters
+ */
 
 int selector(const char *format, va_list args, int numbers)
 {
