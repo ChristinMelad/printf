@@ -10,7 +10,7 @@
 int print_integer(va_list args, int numbers)
 {
 	int num = va_arg(args, int);
-	int count, count = 0;
+	int count = 0;
 	int temp = num;
 
 if (num < 0)
