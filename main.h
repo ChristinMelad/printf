@@ -5,13 +5,24 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <string.h>
 
+/**
+*struct print - structure for printf.
+*@func:function pointer to print functions.
+*@identifier:match the input char.
+*/
+typedef struct print
+{
+	char identifier;
+	int (*func)(va_list);
 
-/*My Functions*/
+} specifiers;
+
 int _putchar(char c);
-void _puts(char *str);
-int len(char *s);
+int print_string(va_list args);
+int printc(va_list args);
+int (*cmp_func(const char f))(va_list);
 int _printf(const char *format, ...);
-int print_c(va_list myvalue);
 
-#endif
+#endif /*MAIN_H*/
