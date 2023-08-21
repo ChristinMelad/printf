@@ -16,67 +16,34 @@ return (write(1, &c, 1));
 /**
 *printc - prints character
 *@args: list
-*Return: 1
+*@numbers: printed characters
+*Return: characters
 */
-int printc(va_list args)
+int printc(va_list args, int numbers)
 {
-	_putchar(va_arg(args, int));
-	return (1);
+	int character = va_arg(args, int);
+
+	_putchar(character);
+	return (numbers + 1);
 }
 
 
 /**
 *print_string - prints string
 *@args: arguments
-*Return: 6
+*@numbers: printed charcaters
+*Return: characters
 */
 
-int print_string(va_list args)
+int print_string(va_list args, int numbers)
 {
-	char *str;
-	int i;
+	char *str = va_arg(args, char *);
 
-	str = va_arg(args, char*);
-	if (str == NULL)
-	{
-		write(1, "(null)", 6);
-		return (6);
-	}
-else
+while (*str != '\0')
 {
-for (i = 0; str[i] != '\0'; i++)
-{
-_putchar(str[i]);
+	_putchar(*str);
+	numbers++;
+	str++;
 }
-return (i);
-}
-}
-
-
-/**
-*cmp_func - Funcation compares between 2 parameters
-*@f: variable to hold the value passed to cmp function
-*Return: 0.
-*/
-
-int(*cmp_func(const char f))(va_list)
-
-{
-specifiers printf[] = {
-{'c', printc},
-{'s', print_string},
-{'\0', NULL},
-};
-
-
-int i;
-
-for (i = 0; printf[i].identifier != '\0'; i++)
-{
-	if (printf[i].identifier == f)
-	{
-		return (printf[i].func);
-	}
-}
-return (0);
+return (numbers);
 }
