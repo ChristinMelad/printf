@@ -137,7 +137,7 @@ int printc(va_list args)
 }
 
 /**
- * print_mod - print %
+ * print_percentage - print %
  * Return: 1
  */
 
