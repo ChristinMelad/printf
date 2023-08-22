@@ -15,8 +15,9 @@ int print_string(va_list args);
 int print_percentage(void);
 int print_decimal(va_list args);
 int print_integer(va_list args);
+int _abs(int num);
 int str_len(char *s);
-int str_lenc(const char *s);
+int str_length(const char *s);
 int print_reverse(va_list args, int numbers);
 
 
