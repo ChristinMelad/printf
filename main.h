@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
+#include <limits.h>
 
 int _putchar(char c);
 int _printf(const char *format, ...);
@@ -16,6 +17,7 @@ int print_decimal(va_list args);
 int print_integer(va_list args);
 int str_len(char *s);
 int str_lenc(const char *s);
+int print_reverse(va_list args, int numbers);
 
 
 /**

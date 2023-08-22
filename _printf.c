@@ -14,6 +14,7 @@ int _printf(const char *format, ...)
 		{"%%", print_percentage},
 		{"%d", print_decimal},
 		{"%i", print_integer},
+		{"%%r", print_reverse},
 	};
 
 va_list args;
@@ -28,7 +29,7 @@ First_loop:
 
 while (format[i] != '\0')
 {
-	j = 4;
+	j = 5;
 	while (j >= 0)
 	{
 		if (arr[j].c[0] == format[i] && arr[j].c[1] == format[i + 1])
