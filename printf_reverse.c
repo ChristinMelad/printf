@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
-*print_reverse - prints the string reversed
-*@args: arguments
-*@numbers: characters
-*Return: numbers
-*/
+ *print_reverse - prints the string reversed
+ *@args: arguments
+ *@numbers: characters
+ *Return: numbers
+ */
 
 int print_reverse(va_list args, int numbers)
 {

@@ -20,18 +20,16 @@ int str_len(char *s);
 int str_length(const char *s);
 int print_reverse(va_list args, int numbers);
 
-
 /**
-*struct my_specifiers - match the conversion specifiers
-*@c: type pointer of the specifier
-*@func: pointer to function
-*/
+ *struct my_specifiers - match the conversion specifiers
+ *@c: type pointer of the specifier
+ *@func: pointer to function
+ */
 typedef struct my_specifiers
 {
 	char *c;
 	int (*func)();
 
 } specifiers;
-
 
 #endif /*MAIN_H*/

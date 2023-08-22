@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
-*print_integer - prints integer number
-*@value: printed the value
-*Return: i
-*/
+ *print_integer - prints integer number
+ *@args: arguments
+ *Return: i
+ */
 
 int print_integer(va_list args)
 {
@@ -12,45 +12,45 @@ int print_integer(va_list args)
 	int num, last_dig = n % 10, dig;
 	int i = 1, expression = 1;
 
-n = n / 10;
-num = n;
-
-if (last_dig < 0)
-{
-	_putchar('-');
-	num = -num;
-	n = -n;
-	last_dig = -last_dig;
-	i++;
-}
-if (num > 0)
-{
-	while ((num / 10) != 0)
-	{
-		expression *= 10;
-		num /= 10;
-	}
+	n = n / 10;
 	num = n;
-	while (expression > 0)
+
+	if (last_dig < 0)
 	{
-		dig = num / expression;
-		_putchar(dig + '0');
-		num -= dig * expression;
-		expression /= 10;
+		_putchar('-');
+		num = -num;
+		n = -n;
+		last_dig = -last_dig;
 		i++;
 	}
-}
-_putchar(last_dig + '0');
-return (i);
+	if (num > 0)
+	{
+		while ((num / 10) != 0)
+		{
+			expression *= 10;
+			num /= 10;
+		}
+		num = n;
+		while (expression > 0)
+		{
+			dig = num / expression;
+			_putchar(dig + '0');
+			num -= dig * expression;
+			expression /= 10;
+			i++;
+		}
+	}
+	_putchar(last_dig + '0');
+	return (i);
 }
 
 /**
  * print_decimal - print decimal
- * @args: printed the value
+ * @args: argument
  * Return: i
-*/
+ */
 
-int print_dec(va_list args)
+int print_decimal(va_list args)
 {
 	int n = va_arg(args, int);
 	int num, last_dig = n % 10, dig;
@@ -92,7 +92,7 @@ int print_dec(va_list args)
  * print_string - prints string
  * @args: argument
  * Return: string length
-*/
+ */
 
 int print_string(va_list args)
 {
@@ -122,12 +122,11 @@ int print_string(va_list args)
 	}
 }
 
-
 /**
  * printc - prints character
  * @args: print character
  * Return: (1)
-*/
+ */
 
 int printc(va_list args)
 {
@@ -140,7 +139,7 @@ int printc(va_list args)
 /**
  * print_mod - print %
  * Return: 1
-*/
+ */
 
 int print_mod(void)
 {

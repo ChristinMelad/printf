@@ -49,7 +49,7 @@ int str_len(char *str)
 }
 
 /**
- *str_len_cons - string length function for constant string
+ *str_length - string length function for constant string
  *@str: constant string
  *Return: length of string
  */

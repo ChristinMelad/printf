@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
-*_printf - function that prints the characters
-*@format: our main string
-*Return: numbers of the characters
-*/
+ *_printf - function that prints the characters
+ *@format: our main string
+ *Return: numbers of the characters
+ */
 
 int _printf(const char *format, ...)
 {
@@ -17,32 +17,32 @@ int _printf(const char *format, ...)
 		{"%%r", print_reverse},
 	};
 
-va_list args;
-int i = 0, j, numbers = 0;
+	va_list args;
+	int i = 0, j, numbers = 0;
 
-va_start(args, format);
+	va_start(args, format);
 
-if (format == NULL || (format[0] == '%' && format[1] == '\0'))
-return (-1);
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
 
 First_loop:
 
-while (format[i] != '\0')
-{
-	j = 5;
-	while (j >= 0)
+	while (format[i] != '\0')
 	{
-		if (arr[j].c[0] == format[i] && arr[j].c[1] == format[i + 1])
+		j = 5;
+		while (j >= 0)
 		{
-			numbers += arr[j].func(args);
-			i += 2;
-			goto First_loop;
+			if (arr[j].c[0] == format[i] && arr[j].c[1] == format[i + 1])
+			{
+				numbers += arr[j].func(args);
+				i += 2;
+				goto First_loop;
+			}
+			j--;
 		}
-		j--;
-	}
-	_putchar(format[i]);
-	numbers++;
-	i++;
+		_putchar(format[i]);
+		numbers++;
+		i++;
 	}
 	va_end(args);
 	return (numbers);
