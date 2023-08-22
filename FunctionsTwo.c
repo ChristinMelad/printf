@@ -141,7 +141,7 @@ int printc(va_list args)
  * Return: 1
  */
 
-int print_mod(void)
+int print_percentage(void)
 {
 	_putchar('%');
 	return (1);
